@@ -24,19 +24,20 @@ export default function Form () {
             if (response.ok) {
               // Data saved successfully
               console.log('Data saved to database');
+
+            //   !!!! user downloads catalog !!!!
+
             } else {
               // Handle error
               console.error('Failed to save data');
             }
-          } catch (error) {
-            console.error('Error:', error);
-          }
-        };
+            
+        } catch (error) {
+            throw Error;
+            // console.error('Error:', error);
+        }
+    };
       
-
-
-    }
-
 
     return (
         <form onSubmit={handleSubmit}>
@@ -49,16 +50,28 @@ export default function Form () {
                         <label className="label">
                             <span className="label-text font-extralight text-xs md:text-sm lg:text-base">Name</span>
                         </label>
-                        <input required type="text" placeholder="Your name here" className="input w-full max-w-xs bg-slate-100 border-b-2 outline-none mt-2 mb-8 placeholder:font-extralight" />
+
+                        <input required 
+                        type="text" 
+                        onChange={e => setName(e.target.value)} 
+                        placeholder="Your name here" 
+                        className="input w-full max-w-xs bg-slate-100 border-b-2 outline-none mt-2 mb-8 placeholder:font-extralight" />
 
                         <label className="label">
                             <span className="label-text font-extralight text-xs md:text-sm lg:text-base">Email</span>
                         </label>
-                        <input required type="email" placeholder="Your email here" className="input w-full max-w-xs bg-slate-100 border-b-2 outline-none mt-2 mb-8 placeholder:font-extralight" />
+
+                        <input required 
+                        type="email" 
+                        onChange={e => setEmail(e.target.value)} 
+                        placeholder="Your email here" 
+                        className="input w-full max-w-xs bg-slate-100 border-b-2 outline-none mt-2 mb-8 placeholder:font-extralight" />
                     </div>
 
                     <div className="form-control flex justify-center md:justify-end">
-                        <button type="submit" className="btn bg-black text-slate-100 hover:bg-slate-100 border hover:border-black hover:text-black font-light py-1 px-4">
+                        <button 
+                        type="submit" 
+                        className="btn bg-black text-slate-100 hover:bg-slate-100 border hover:border-black hover:text-black font-light py-1 px-4">
                             Take it ! 
                         </button>
                     </div>
@@ -73,12 +86,20 @@ export default function Form () {
                         <label className="label">
                             <span className="label-text font-extralight text-xs md:text-sm lg:text-base">Name</span>
                         </label>
-                        <input disabled type="text" placeholder="Your name here" className="input w-full max-w-xs bg-slate-100 border-b-2 outline-none mt-2 mb-8 placeholder:font-extralight" />
+
+                        <input disabled 
+                        type="text" 
+                        placeholder="Your name here" 
+                        className="input w-full max-w-xs bg-slate-100 border-b-2 outline-none mt-2 mb-8 placeholder:font-extralight" />
 
                         <label className="label">
                             <span className="label-text font-extralight text-xs md:text-sm lg:text-base">Email</span>
                         </label>
-                        <input disabled type="email" placeholder="Your email here" className="input w-full max-w-xs bg-slate-100 border-b-2 outline-none mt-2 mb-8 placeholder:font-extralight" />
+
+                        <input disabled 
+                        type="email" 
+                        placeholder="Your email here" 
+                        className="input w-full max-w-xs bg-slate-100 border-b-2 outline-none mt-2 mb-8 placeholder:font-extralight" />
                     </div>
 
                     <div className="form-control flex justify-center md:justify-end">
