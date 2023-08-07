@@ -11,31 +11,40 @@ export default function Form () {
         e.preventDefault();
         setIsLoading(true); 
 
-        try {
-            // Send data to backend
-            const response = await fetch('/api/sendData', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({ name, email }),
-            });
-      
-            if (response.ok) {
-              // Data saved successfully
-              console.log('Data saved to database');
+        if (name !== '' && email !== '') {
 
-            //   !!!! user downloads catalog !!!!
+            //   !!!! download of the catalog here !!!!
 
-            } else {
-              // Handle error
-              console.error('Failed to save data');
-            }
-            
-        } catch (error) {
+            try {
+                //send data to backend
+                const response = await fetch('/api/sendData', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, email }),
+                });
+       
+                if (response.ok) {
+                    // data saved successfully
+                    console.log('Data saved to database');
+                    
+                } else {
+                    // handle error
+                    console.error('Failed to save data');
+                }
+                
+            } catch (error) {
+                // console.error('Error:', error);
+                throw Error;
+            } 
+
+        } else {
+            console.log('Name and Email are mandatory');
             throw Error;
-            // console.error('Error:', error);
         }
+
+
     };
       
 
