@@ -18,23 +18,23 @@ export async function POST (req: NextRequest) {
     
     try {
         await client.connect();
-        const database: Db = client.db('CatalogUsers');                                             // connect to the 'CatalogUsers' database
-        const collectionUsers: Collection<userData> = database.collection<userData>('users');        // access the 'users' collection
-        const { name, email } = await req.json();   // parse the user data
+        const database: Db = client.db('CatalogUsers');  
+        const collectionUsers: Collection<userData> = database.collection<userData>('users');  
+        const { name, email } = await req.json();   
         
-        if (name && email) {      // check if user provided name and email
+        if (name && email) { 
             
-            const existEmail = await collectionUsers.findOne<userEmail>({     // check if email exists in the database
+            const existEmail = await collectionUsers.findOne<userEmail>({  
                 email: email
             })
             
-            if (!existEmail) {     // if email does not exist in the database, insert it
+            if (!existEmail) {  
                 await collectionUsers.insertOne({
                     name: name,
                     email: email,
                 });
             }
-            
+
             return NextResponse.json({ message: 'Received POST request successfully' });
 
         } else {
