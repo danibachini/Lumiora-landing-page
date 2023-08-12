@@ -60,41 +60,52 @@ export default function Form () {
                 <h1 className="font-serif text-lg md:text-xl mb-6">Get Our Catalog</h1>
 
                 <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text font-extralight text-xs md:text-sm lg:text-base">Name</span>
+                    <label className="label p-0">
+                        <span className="label-text font-extralight text-sm lg:text-base">Name</span>
                     </label>
 
-                    <input required 
+                    <input 
+                    required 
                     type="text" 
                     value={name}
                     onChange={e => setName(e.target.value)} 
                     placeholder="Your name here" 
                     disabled={isLoading}
-                    className="input w-full max-w-xs bg-slate-100 border-b-2 outline-none mt-2 mb-8 placeholder:font-extralight" />
+                    className="input w-full max-w-xs max-h-10 bg-slate-100 
+                    rounded-none border-b-slate-300 border-t-0 border-r-0 border-l-0 
+                    focus:outline-none text-slate-500 font-light mb-4 p-0 placeholder:font-extralight" 
+                    />
 
-                    <label className="label">
-                        <span className="label-text font-extralight text-xs md:text-sm lg:text-base">Email</span>
+                    <label className="label p-0 mt-3">
+                        <span className="label-text font-extralight text-sm lg:text-base">Email</span>
                     </label>
 
-                    <input required 
+                    <input 
+                    required 
                     type="email" 
                     value={email}
                     onChange={e => setEmail(e.target.value)} 
                     placeholder="Your email here" 
                     disabled={isLoading}
-                    className="input w-full max-w-xs bg-slate-100 border-b-2 outline-none mt-2 mb-8 placeholder:font-extralight" />
+                    className="input w-full max-w-xs max-h-10 bg-slate-100 
+                    rounded-none border-b-slate-300 border-t-0 border-r-0 border-l-0 
+                    focus:outline-none text-slate-500 font-light mb-4 p-0 placeholder:font-extralight" 
+                    />
                 </div>
 
-                <div className="form-control flex justify-center md:justify-end">
-                    {isLoading ? (
-                        <span className="loading loading-spinner loading-xs text-black"></span>
-                    ) : (
-                        <button
-                        type="submit"
-                        className="btn bg-black text-slate-100 hover:bg-slate-100 border hover:border-black hover:text-black font-light py-1 px-4">
-                            Take it !
-                        </button>
-                    )}
+                <div className="form-control grid md:grid-cols-2 justify-items-center md:justify-items-end mt-5">
+                    <div className="md:col-start-2 md:col-span-1  "> 
+                        {isLoading ? (
+                            <span className="loading loading-spinner loading-xs text-black"></span>
+                            ) : (
+                                <button
+                                type="submit"
+                                className="btn bg-black rounded-none text-slate-100 hover:bg-slate-100 
+                                border hover:border-black hover:text-black font-light btn-sm ">
+                                Take it !
+                            </button>
+                        )}
+                    </div>
                 </div>
 
             </div>

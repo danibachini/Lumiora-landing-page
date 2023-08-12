@@ -53,7 +53,7 @@ export default function Home() {
       </div>
       
       <div className="bg-[url('/pic6.jpeg')] h-96 lg:h-128 w-full bg-cover bg-top p-10 my-10 grid grid-cols-3 lg:grid-cols-4 lg:gap-20 place-content-evenly">
-        <div className="max-w-xl lg:max-w-xs p-8 mx-auto bg-slate-100 shadow-md col-start-1 col-end-3 lg:col-start-2">
+        <div className="max-w-xl auto-rows-min lg:max-w-xs p-8 mx-auto bg-slate-100 shadow-md col-start-1 col-end-3 lg:col-start-2">
           <Form/>
         </div>
       </div>
