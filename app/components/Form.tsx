@@ -18,9 +18,15 @@ export default function Form () {
             link.download = 'Catalog_Lumiora.pdf';
 
             // trigger the download
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            try {
+                document.body.appendChild(link);
+                link.click();
+            } catch (error) {
+                console.log(error);
+            } finally {
+                document.body.removeChild(link);
+                setIsLoading(false);
+            }
 
             try {   
                 const response = await fetch('/api/sendData', {
@@ -49,7 +55,6 @@ export default function Form () {
             throw Error;
         }
 
-        setIsLoading(false);
         setEmail('');
         setName('');
     };
@@ -70,7 +75,7 @@ export default function Form () {
                     value={name}
                     onChange={e => setName(e.target.value)} 
                     placeholder="Your name here" 
-                    disabled={isLoading}
+                    
                     className="input w-full max-w-xs max-h-10 bg-slate-100 
                     rounded-none border-b-slate-300 border-t-0 border-r-0 border-l-0 
                     focus:outline-none text-slate-500 font-light mb-4 p-0 placeholder:font-extralight" 
@@ -86,7 +91,7 @@ export default function Form () {
                     value={email}
                     onChange={e => setEmail(e.target.value)} 
                     placeholder="Your email here" 
-                    disabled={isLoading}
+                    
                     className="input w-full max-w-xs max-h-10 bg-slate-100 
                     rounded-none border-b-slate-300 border-t-0 border-r-0 border-l-0 
                     focus:outline-none text-slate-500 font-light mb-4 p-0 placeholder:font-extralight" 

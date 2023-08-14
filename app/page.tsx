@@ -1,5 +1,6 @@
 
-import Form from "./Form"
+import Form from "./components/Form"
+import Carousel from "./components/Carousel"
 
 export default function Home() {
   return (
@@ -58,6 +59,11 @@ export default function Home() {
         </div>
       </div>
 
+      {/* LET'S PUT A FREAKING CAROUSEL HERE WITH COMMENTS */}
+
+      <div className="text-center my-14 lg:my-24">
+        <Carousel/>
+      </div>
 
     </main>
   )
