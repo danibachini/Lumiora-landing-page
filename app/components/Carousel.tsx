@@ -1,34 +1,24 @@
 
+export default function Carousel() {
 
-export default function Carousel () {
-    return(
+    const images = ['allure.png', 'cosmopolitan.png', 'elle.png', 'GQ.png', 'instyle.png', 'marie-claire.png', 'vanity-fair.png', 'vogue.png'];
+    const carouselImages = [...images, ...images, ...images]; 
+
+    return (
         <div>
-            <h3 className="font-serif text-lg md:text-xl my-10">What they are saying about us</h3>
-
-
+            <h3 className="font-serif text-lg md:text-xl my-10">They are talking about us</h3>
             <div id="slide-parent">
-
-
                 <div id="slide">
-
-                    <p>text text text 1</p>
-                    <p>text text text 2</p>
-                    <p>text text text 3</p>
-                    <p>text text text 4</p>
-                    <p>text text text 5</p>
-                    <p>text text text 6</p>
-                    <p>text text text 7</p>
-                    <p>text text text 8</p>
-                
+                    {carouselImages.map((image, index) => (
+                        <img
+                        key={index}
+                        src={image}
+                        />
+                    ))}
                 </div>
-                
             </div>
         </div>
-
-
-
-
-    )
+    );
 }
 
 

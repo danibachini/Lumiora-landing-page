@@ -76,7 +76,7 @@ export default function Form () {
                     onChange={e => setName(e.target.value)} 
                     placeholder="Your name here" 
                     
-                    className="input w-full max-w-xs max-h-10 bg-slate-100 
+                    className="input w-full max-w-xs max-h-10 bg-slate-50 
                     rounded-none border-b-slate-300 border-t-0 border-r-0 border-l-0 
                     focus:outline-none text-slate-500 font-light mb-4 p-0 placeholder:font-extralight" 
                     />
@@ -92,7 +92,7 @@ export default function Form () {
                     onChange={e => setEmail(e.target.value)} 
                     placeholder="Your email here" 
                     
-                    className="input w-full max-w-xs max-h-10 bg-slate-100 
+                    className="input w-full max-w-xs max-h-10 bg-slate-50 
                     rounded-none border-b-slate-300 border-t-0 border-r-0 border-l-0 
                     focus:outline-none text-slate-500 font-light mb-4 p-0 placeholder:font-extralight" 
                     />
@@ -105,7 +105,7 @@ export default function Form () {
                             ) : (
                                 <button
                                 type="submit"
-                                className="btn bg-black rounded-none text-slate-100 hover:bg-slate-100 
+                                className="btn bg-black rounded-none text-slate-100 hover:bg-slate-50 
                                 border hover:border-black hover:text-black font-light btn-sm ">
                                 Take it !
                             </button>
