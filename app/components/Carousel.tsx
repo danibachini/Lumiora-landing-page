@@ -1,8 +1,8 @@
 
 export default function Carousel() {
 
-    const images = ['allure.png', 'cosmopolitan.png', 'elle.png', 'GQ.png', 'instyle.png', 'marie-claire.png', 'vanity-fair.png', 'vogue.png'];
-    const carouselImages = [...images, ...images, ...images]; 
+    const images:string[] = ['allure.png', 'cosmopolitan.png', 'elle.png', 'GQ.png', 'instyle.png', 'marie-claire.png', 'vanity-fair.png', 'vogue.png'];
+    const carouselImages:string[] = [...images, ...images, ...images]; 
 
     return (
         <div>
@@ -20,5 +20,3 @@ export default function Carousel() {
         </div>
     );
 }
-
-

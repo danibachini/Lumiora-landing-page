@@ -1,6 +1,8 @@
 
 import Form from "./components/Form"
 import Carousel from "./components/Carousel"
+import Testimonials from "./components/Testimonials"
+import Cards from "./components/Cards"
 
 export default function Home() {
   return (
@@ -20,50 +22,25 @@ export default function Home() {
         <h3 className="font-serif text-lg md:text-xl">True Beauty Comes From Nature</h3>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-2  container m-auto">
-
-        <div className="lg:col-start-2 md:col-start-1 py-14 px-6 md:px-0">
-          <div className="h-full w-full -mt-14">
-            <img className="min-w-full min-h-full object-cover" src="/pic1.webp" alt="" />
-          </div>
-          <div className="text-center mt-6">
-            <p className="font-serif font-light">Glamorous Summer</p>
-            <p className="font-extralight">Sandals For All Styles</p>
-          </div>
-        </div>
-
-        <div className="lg:col-start-3 md:col-start-2 py-14 px-6 md:px-0">
-          <div className="h-full w-full -mt-14">
-            <img className="min-w-full min-h-full object-cover" src="/pic4.webp" alt="" />
-          </div>
-          <div className="text-center mt-6">
-            <p className="font-serif font-light">Party All Night</p>
-            <p className="font-extralight">Comfortable Deluxe Heels</p>
-          </div>
-        </div>
-
-        <div className="lg:col-start-4 md:col-start-3 py-14 px-6 md:px-0">
-          <div className="h-full w-full -mt-14">
-            <img className="min-w-full min-h-full object-cover" src="/pic9.webp" alt="" />
-          </div>
-          <div className="text-center mt-6">
-            <p className="font-serif font-light">Dream Wedding</p>
-            <p className="font-extralight">Sexy, Elegant, and Romantic</p>
-          </div>
-        </div>
-      </div>
+      <Cards/>
       
+      <div className="bg-[url('/pic14.webp')] h-60 lg:h-96 w-full bg-cover bg-center my-10"/>
+
+      <div className="mx-6">
+        <Testimonials/>
+      </div>
+
       <div className="bg-[url('/pic6.jpeg')] h-96 lg:h-128 w-full bg-cover bg-top p-10 my-10 grid grid-cols-3 lg:grid-cols-4 lg:gap-20 place-content-evenly">
         <div className="max-w-xl auto-rows-min lg:max-w-xs p-8 mx-auto bg-slate-50 shadow-md col-start-1 col-end-3 lg:col-start-2">
           <Form/>
         </div>
       </div>
 
-      {/* LET'S PUT A FREAKING CAROUSEL HERE WITH COMMENTS */}
-
       <div className="text-center my-14 lg:my-24">
         <Carousel/>
       </div>
+
+      <div className="bg-[url('/pic12-2.jpeg')] h-60 lg:h-96 w-full bg-cover bg-center"/>
 
     </main>
   )
