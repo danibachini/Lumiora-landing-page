@@ -13,8 +13,8 @@ export default function Home() {
 
       <div className="bg-[url('/pic8.jpg')] h-60 lg:h-96 w-full bg-cover bg-bottom p-10 grid grid-cols-3 lg:grid-cols-4 lg:gap-20 place-content-evenly">
         <div className="max-w-xl lg:max-w-xs py-8 px-5 mx-auto bg-slate-50 shadow-md col-start-1 col-end-3 lg:col-start-2">
-          <p className="text-xs md:text-sm lg:text-base text-black font-serif">STANDOUT SANDALS</p>
-          <p className="text-xs md:text-sm lg:text-base text-black font-extralight">Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+          <p className="text-xs md:text-sm lg:text-base font-serif">STANDOUT SANDALS</p>
+          <p className="text-xs md:text-sm lg:text-base font-extralight">Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
         </div>
       </div>
 
@@ -26,7 +26,10 @@ export default function Home() {
       
       <div className="bg-[url('/pic14.webp')] h-60 lg:h-96 w-full bg-cover bg-center my-10"/>
 
-      <div className="mx-6">
+      <div className="text-center mt-14 mb-8 lg:mt-16">
+        <h3 className="font-serif text-lg md:text-xl">Our Customers Are In Love !</h3>
+      </div>
+      <div className="mx-6 flex justify-center">
         <Testimonials/>
       </div>
 
@@ -36,7 +39,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="text-center my-14 lg:my-24">
+      <div className="text-center my-14 lg:my-20">
         <Carousel/>
       </div>
 

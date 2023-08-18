@@ -6,7 +6,7 @@ export default function Carousel() {
 
     return (
         <div>
-            <h3 className="font-serif text-lg md:text-xl my-10">They are talking about us</h3>
+            <h3 className="font-serif text-lg md:text-xl my-10 lg:my-14">They Are Talking About Us</h3>
             <div id="slide-parent">
                 <div id="slide">
                     {carouselImages.map((image, index) => (

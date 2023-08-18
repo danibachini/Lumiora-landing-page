@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className="bg-slate-50" lang="en">
+    <html className=" bg-slate-50" lang="en">
       <body >{children}</body>
     </html>
   )
